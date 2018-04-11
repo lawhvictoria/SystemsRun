@@ -11,6 +11,7 @@ jdk:
 before_script:
   - cd 309-SystemsRun/
 script:
+  - mvn install:install-file -Dfile=core.jar -DgroupId=processing -DartifactId=processing.core -Dversion=2.2.1 -Dpackaging=jar -DgeneratePom=true
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
 cache:
   directories:
