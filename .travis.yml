@@ -8,6 +8,7 @@ addons:
       secure: "b040e7d261220971737560c20065279a069a9fbb"
 jdk:
   - oraclejdk8
+before_script: cd 309-SystemsRun
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
 cache:
