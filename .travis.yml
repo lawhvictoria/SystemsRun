@@ -5,7 +5,7 @@ addons:
   sonarcloud:
     organization: "lawhvictoria-github"
     token:
-      secure: b040e7d261220971737560c20065279a069a9fbb
+      secure: "b040e7d261220971737560c20065279a069a9fbb"
 jdk:
   - oraclejdk8
 script:
