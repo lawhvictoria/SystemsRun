@@ -5,6 +5,7 @@
 
 public interface WorldObject {
 	
+	
 	/*
 	 * What the object should do on a game update tick
 	 */
