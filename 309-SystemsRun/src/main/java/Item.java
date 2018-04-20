@@ -4,7 +4,7 @@ import processing.core.PImage;
  * Item base class.
  */
 
-public abstract class Item implements Drawable, WorldObject{
+public abstract class Item implements Drawable{
 	public float x, y;
 	public PImage img;
 	

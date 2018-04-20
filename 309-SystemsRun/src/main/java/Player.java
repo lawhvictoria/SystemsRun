@@ -1,10 +1,7 @@
-public class Player implements Drawable, WorldObject{
+public class Player implements Drawable{
 	
 	public void draw() {
 		
 	}
 	
-	public void onGameTick() {
-		
-	}
 }

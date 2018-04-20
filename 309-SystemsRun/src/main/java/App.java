@@ -11,7 +11,7 @@ public class App extends PApplet
 	public static final int INITIAL_WIDTH = 1000;
 	public static final int INITIAL_HEIGHT = 700;
 	
-	Item beer; // Test item
+	World world; // Put this somewhere else later
 	
     public static void main( String[] args )
     {
@@ -37,16 +37,12 @@ public class App extends PApplet
         surface.setResizable(true);
         
         
-        // Test item
-        beer = new BeerItem();        
+        // Put this somewhere else 
+        world = new World();
     }
 
     public void draw(){
-    	
-    		//Test item
-    		beer.x = 10;
-    		beer.y = 10;
-    		beer.draw();
+    		world.update();
     }
     
 }
