@@ -1,5 +1,5 @@
 
-public abstract class Bar implements Drawable{
+public class Bar implements Drawable{
 	
 	private int value;
 	private int[] color = new int[4];

@@ -14,12 +14,10 @@ public class Draw {
 	
 	public static void drawImage(PImage img, float xUnscaled, float yUnscaled) {
 		
-		float sDim = img.width < img.height ? img.width : img.height;
-		
 		app.image(	img, 
-					xUnscaled / 100f * app.width,		// X
-					yUnscaled / 100f * app.height,		// Y
-					100 * img.width / sDim,				// Width
-					100 * img.height / sDim);			// Height
+					xUnscaled / 100f * app.width,							// X
+					yUnscaled / 100f * app.height,							// Y
+					((float)app.width/App.INITIAL_WIDTH) * img.width,			// Width
+					((float)app.height/App.INITIAL_HEIGHT) * img.height);		// Height
 	}
 }

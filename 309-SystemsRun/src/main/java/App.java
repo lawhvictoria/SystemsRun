@@ -6,9 +6,9 @@ import processing.core.PApplet;
 
 public class App extends PApplet
 {
-	public static final int MIN_WIDTH = 300;
-	public static final int MIN_HEIGHT = 500;
-	public static final int INITIAL_WIDTH = 500;
+	public static final int MIN_WIDTH = 250;
+	public static final int MIN_HEIGHT = 175;
+	public static final int INITIAL_WIDTH = 1000;
 	public static final int INITIAL_HEIGHT = 700;
 	
 	Item beer; // Test item
@@ -19,7 +19,7 @@ public class App extends PApplet
     }
     
     public void settings(){
-        size(INITIAL_WIDTH, INITIAL_HEIGHT);        
+        size(INITIAL_WIDTH, INITIAL_HEIGHT);    
         Draw.setApplet(this);
     }
 
