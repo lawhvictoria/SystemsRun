@@ -1,12 +1,6 @@
-import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.Window;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-
 import javax.swing.JFrame;
 import processing.awt.PSurfaceAWT.SmoothCanvas;
 import processing.core.PApplet;

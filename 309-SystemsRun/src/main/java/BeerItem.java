@@ -8,9 +8,6 @@ public class BeerItem extends Item{
 	public BeerItem(World world) {
 		super("src/images/cat.png", world);
 	}
-	
-	public void onGameTick() {
-		
-	}
+
 
 }

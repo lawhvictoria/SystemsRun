@@ -1,4 +1,3 @@
-import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -74,8 +73,8 @@ public class ItemLane {
 		}
 			
 		if(debugShowDisplay) {
-			Draw.drawRect(startX, startY, 5, 5);
-			Draw.drawRect(endX, endY, 5, 5);
+			Draw.drawRect(startX, startY+2, 5, 5, 0, 255, 0);
+			Draw.drawRect(endX, endY-2, 5, 5, 255, 0, 0);
 		}
 		
 	}

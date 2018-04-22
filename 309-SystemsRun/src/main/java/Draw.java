@@ -2,7 +2,7 @@ import processing.core.*;
 
 public class Draw {
 	
-	public final static float DEPTH_MIN = .7f;
+	public final static float DEPTH_MIN = .6f;
 	public final static float DEPTH_MAX = 1.0f;
 	
 	public static int dim = 1;
@@ -33,29 +33,43 @@ public class Draw {
 
 			}
 		}
-		
-		
-		
 	}
 	
-	private static void drawImageCopy(PImage img, float xUnscaled, float yUnscaled, float z, float xOffset, float yOffset, float scale) {
+	private static void drawImageCopy(PImage img, float xUnscaled, float yUnscaled, 
+									  float z, float xOffset, float yOffset, float scale) {
+
 		z = DEPTH_MIN + (DEPTH_MAX - DEPTH_MIN) * z / 100;
-		//System.out.println(xOffset + " " + yOffset);
 		app.imageMode(PImage.CENTER);
 		app.image(	img, 
-					(xOffset + xUnscaled*scale) / 100f * app.width,							// X
-					(yOffset + yUnscaled*scale) / 100f * app.height,							// Y
+					(xOffset + xUnscaled*scale) / 100f * app.width,						// X
+					(yOffset + yUnscaled*scale) / 100f * app.height,						// Y
 					(float)app.width/App.INITIAL_WIDTH * img.width * z * scale,			// Width
 					(float)app.height/App.INITIAL_HEIGHT * img.height * z * scale);		// Height
 	}
 	
 	public static void drawRect(	float xUnscaled, float yUnscaled, 
-								float widthUnscaled, float heighUnscaled) {
+								float widthUnscaled, float heighUnscaled, int r, int g, int b) {
+				
+		for(int i = 0; i < dim; i++) {
+			for(int j = 0; j < dim; j++) {
+				drawRectCopy(xUnscaled, yUnscaled, widthUnscaled, heighUnscaled, 
+							 i*100f/dim, j*100f/dim, (float)1/dim, r, g, b);
+			}
+		}
+						
+	}
+	
+	private static void drawRectCopy(float xUnscaled, float yUnscaled, 
+									 float widthUnscaled, float heighUnscaled,
+									 float xOffset, float yOffset, float scale,
+									 int r, int g, int b) {
 		
-		app.rect( xUnscaled / 100f * app.width, yUnscaled / 100f * app.height, 
-				(float) app.width/App.INITIAL_WIDTH * widthUnscaled, 
-				(float) app.height/App.INITIAL_HEIGHT * heighUnscaled);
-		
+		app.fill(r, g, b);
+		app.rect( 
+				(xOffset + xUnscaled*scale) / 100f * app.width, 							// X
+				(yOffset + yUnscaled*scale) / 100f * app.height, 						// Y
+				(float) app.width/App.INITIAL_WIDTH * widthUnscaled, 					// Width
+				(float) app.height/App.INITIAL_HEIGHT * heighUnscaled);					// Height
 	}
 	
 	

@@ -12,15 +12,15 @@ public class World {
 	
 	public World() { // TEST ITEMS
 		
-		ItemLane lane1 = new ItemLane(this, 30, 0, 20, 99);
+		ItemLane lane1 = new ItemLane(this, 30, 0, 20, 100);
 		lane1.debugtoggleDisplay();
 		lanes.add(lane1);
 		
-		ItemLane lane2 = new ItemLane(this, 50, 0, 50, 99);
+		ItemLane lane2 = new ItemLane(this, 50, 0, 50, 100);
 		lane2.debugtoggleDisplay();
 		lanes.add(lane2);
 		
-		ItemLane lane3 = new ItemLane(this, 70, 0, 80, 99);
+		ItemLane lane3 = new ItemLane(this, 70, 0, 80, 100);
 		lane3.debugtoggleDisplay();
 		lanes.add(lane3);
 		
