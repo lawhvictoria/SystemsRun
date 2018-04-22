@@ -5,6 +5,9 @@ import processing.core.PImage;
  */
 
 public abstract class Item implements Drawable{
+	
+	public final static float Y_DESPAWN_RANGE = 100;
+	
 	private float x, y;
 	public PImage img;
 	
@@ -32,7 +35,6 @@ public abstract class Item implements Drawable{
 	}
 	
 	public void removeItem() {
-		
 		world.removeObject(this);
 	}
 	
@@ -43,6 +45,10 @@ public abstract class Item implements Drawable{
 	
 	public void setY(float yD) {
 		y = yD;
+		
+		if(y > Y_DESPAWN_RANGE) {
+			removeItem();
+		}
 	}
 	
 	public float getX() {

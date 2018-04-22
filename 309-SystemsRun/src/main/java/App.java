@@ -57,6 +57,18 @@ public class App extends PApplet
         // Put this somewhere else 
         world = new World();
     }
+    
+    public void keyPressed() {
+    		Controller.keyUpdate(key, true);
+    		
+    		if(key == 'q') { //test
+    			Draw.dim++;
+    		}
+    }
+    
+    public void keyReleased() {
+    		Controller.keyUpdate(key, false);
+    }
 
     public void draw(){
     		background(200,200,200);

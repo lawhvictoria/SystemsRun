@@ -1,5 +1,6 @@
 import java.awt.Point;
 import java.util.ArrayList;
+import java.util.Random;
 
 /*
  * Be able to add item to this lane
@@ -11,18 +12,45 @@ public class ItemLane {
 
 	public float startX, startY, endX, endY;
 	public ArrayList<Item> items;
-	public float speed = .1f;
+	public float speed = .5f;
 	
 	private boolean debugShowDisplay = false;
+	private Random rand = new Random();
+	private World world;
 	
-	public ItemLane(float startX, float startY, float endX, float endY) {
+	public ItemLane(World world, float startX, float startY, float endX, float endY) {
 		
+		this.world = world;
 		this.startX = startX;
 		this.startY = startY;
 		this.endX = endX;
 		this.endY = endY;
 		
 		items = new ArrayList<Item>();
+	}
+	
+	public void spawnItem() {
+		
+		Item item;
+		
+		switch(rand.nextInt(3)) {
+		case 0:
+			item = new BeerItem(world);
+			break;
+		
+		case 1:
+			item = new BeerItem(world);
+			break;
+		case 2:	
+			item = new BeerItem(world);
+			break;
+		default:
+			item = new BeerItem(world);
+		}
+		
+		addItem(item);
+			
+		
 	}
 	
 	public void moveItems() {
