@@ -1,3 +1,4 @@
+import java.awt.Point;
 import java.util.ArrayList;
 
 /*
@@ -6,21 +7,36 @@ import java.util.ArrayList;
 
 public class World {
 	private ArrayList<Drawable> objects = new ArrayList<Drawable>();
+	private ArrayList<ItemLane> lanes = new ArrayList<ItemLane>();
 	
 	public World() { // TEST ITEMS
-		BeerItem item1 = new BeerItem();
-		item1.x = 10;
-		item1.y = 20;
-		item1.addItem(this);
 		
-		BeerItem item2 = new BeerItem();
-		item2.x = 60;
-		item2.y = 70;
-		item2.addItem(this);
+		ItemLane lane1 = new ItemLane(30, 0, 20, 99);
+		lane1.addItem(new BeerItem(this));
+		lane1.debugtoggleDisplay();
+		lanes.add(lane1);
+		
+		ItemLane lane2 = new ItemLane(50, 0, 50, 99);
+		lane2.addItem(new BeerItem(this));
+		lane2.debugtoggleDisplay();
+		lanes.add(lane2);
+		
+		ItemLane lane3 = new ItemLane(70, 0, 80, 99);
+		lane3.addItem(new BeerItem(this));
+		lane3.debugtoggleDisplay();
+		lanes.add(lane3);
+		
 	}
 	
 	public void update() {
 		drawAllWorldObjects();
+		moveAllLanes();
+	}
+	
+	public void moveAllLanes() {
+		for(ItemLane lane : lanes) {
+			lane.moveItems();
+		}
 	}
 	
 	public void drawAllWorldObjects() {

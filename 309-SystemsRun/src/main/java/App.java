@@ -37,8 +37,6 @@ public class App extends PApplet
 
     public void setup(){
     	
-    		// Background color and window name
-        fill(120,50,240);
         surface.setTitle("Systems Run");
         
         // Setup minimum window dimensions, allow resize of window
@@ -61,6 +59,7 @@ public class App extends PApplet
     }
 
     public void draw(){
+    		background(200,200,200);
     		world.update();
     }
     

@@ -5,10 +5,15 @@ import processing.core.PImage;
  */
 
 public abstract class Item implements Drawable{
-	public float x, y;
+	private float x, y;
 	public PImage img;
 	
 	private World world;
+	
+	public Item(String imgRef, World world) {		
+		this(imgRef);	
+		addItem(world);		
+	}
 	
 	public Item(String imgRef) {
 		
@@ -17,7 +22,7 @@ public abstract class Item implements Drawable{
 	
 	public void draw() {
 		
-		Draw.drawImage(img, x, y);		
+		Draw.drawImage(img, x, y, Draw.getZDepth(y));
 	}
 	
 	public void addItem(World world) {
@@ -30,4 +35,22 @@ public abstract class Item implements Drawable{
 		
 		world.removeObject(this);
 	}
+	
+	
+	public void setX(float xD) {
+		x = xD;
+	}
+	
+	public void setY(float yD) {
+		y = yD;
+	}
+	
+	public float getX() {
+		return x;
+	}
+	
+	public float getY() {
+		return y;
+	}
+	
 }
