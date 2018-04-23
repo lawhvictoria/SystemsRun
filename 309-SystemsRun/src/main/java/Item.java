@@ -8,6 +8,8 @@ public abstract class Item implements Drawable{
 	
 	public final static float Y_DESPAWN_RANGE = 100;
 	
+	public float deltaSocial, deltaGrade, deltaSleep;
+	
 	private float x, y;
 	public PImage img;
 	

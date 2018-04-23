@@ -82,6 +82,17 @@ public class ItemLane {
 	public void debugtoggleDisplay() {
 		debugShowDisplay = !debugShowDisplay;
 	}
+	
+	// Get the x value for a lane at the specified y
+	public float getXAtY(float y) {
+		float mag = (float) Math.sqrt((Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2)));
+		float yL = endY - startY;
+		float xL = (float)Math.sqrt(Math.pow(mag, 2) - Math.pow(yL, 2));
+		
+		float angle = (float) Math.atan(xL/yL);
+		
+		return startX + (float)Math.tan(angle) * (y-startY) * Math.signum(endX - startX);
+	}
 }
 
 

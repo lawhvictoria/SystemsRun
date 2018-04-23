@@ -12,10 +12,13 @@ public class Player implements Drawable, Controllable{
 	private float speedVelX = 0;
 	private float speedVelY = 0;
 	
+	private ItemLane targetLane;
+	
 	public Player(World world, float x, float y) {
 		this.world = world;
 		this.x = x;
 		this.y = y;
+		
 		img = Draw.loadImage("src/images/cat.png");
 		world.addObject(this);
 		Controller.addListener(this);
@@ -28,27 +31,55 @@ public class Player implements Drawable, Controllable{
 	
 	
 	public void move() {
-		x += speedVelX;
+		float targetX = targetLane.getXAtY(y);
+		
+		if(Math.abs(x - targetX) < 2) {
+			x = targetX;
+		}
+		else if(x < targetX) {
+			x += speedX;
+		}
+		else if(x > targetX) {
+			x -= speedX;
+		}
+		
+		if(y <= Math.min(targetLane.startY, targetLane.endY) || y >= Math.max(targetLane.startY, targetLane.endY)) {
+			y -= speedVelY;
+			speedVelY = 0;
+		}
+		
 		y += speedVelY;
+		
 	}
 
 	public void keyUpdate(Key key, boolean down) {
 		switch(key) {
-		case LEFT:
-			speedVelX = down ? speedVelX - speedX : 0;
+		
+		case LEFT:	
+			if(down && Math.abs(x - targetLane.getXAtY(y)) < 2) {
+				putInLane(world.getLeftLane(targetLane));
+			}
 			break;
+			
 		case RIGHT:
-			speedVelX = down ? speedVelX + speedX : 0;
+			if(down && Math.abs(x - targetLane.getXAtY(y)) < 2) {
+				putInLane(world.getRightLane(targetLane));     // Only allow movement after player is in the lane
+			}
 			break;
 			
 		case UP:
-			speedVelY = down ? speedVelX - speedY : 0;
+			speedVelY = down ? -speedY : 0;
 			break;
+			
 		case DOWN:
-			speedVelY = down ? speedVelX + speedY : 0;
+			speedVelY = down ? speedY : 0;
 			break;
 		}
 		
+	}
+	
+	public void putInLane(ItemLane lane) {
+		targetLane = lane;
 	}
 
 	

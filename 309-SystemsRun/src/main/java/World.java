@@ -25,6 +25,7 @@ public class World {
 		lanes.add(lane3);
 		
 		Player player = new Player(this, 50, 50);
+		player.putInLane(lane2);
 		
 	}
 	
@@ -59,5 +60,15 @@ public class World {
 	
 	public void removeObject(Drawable obj) {
 		objects.remove(obj);
+	}
+	
+	public ItemLane getLeftLane(ItemLane lane) {
+		int index = lanes.indexOf(lane);
+		return index > 0 ? lanes.get(index - 1) : lane;
+	}
+	
+	public ItemLane getRightLane(ItemLane lane) {
+		int index = lanes.indexOf(lane);
+		return index < lanes.size() - 1 ? lanes.get(index + 1) : lane; 
 	}
 }

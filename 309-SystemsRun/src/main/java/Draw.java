@@ -55,8 +55,7 @@ public class Draw {
 				drawRectCopy(xUnscaled, yUnscaled, widthUnscaled, heighUnscaled, 
 							 i*100f/dim, j*100f/dim, (float)1/dim, r, g, b);
 			}
-		}
-						
+		}					
 	}
 	
 	private static void drawRectCopy(float xUnscaled, float yUnscaled, 

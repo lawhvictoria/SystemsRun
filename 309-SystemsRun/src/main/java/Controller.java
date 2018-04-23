@@ -23,9 +23,7 @@ public class Controller {
 	private static void notifyListeners(Key key, boolean down) {
 		for(Controllable listener : controllers) {
 			listener.keyUpdate(key, down);
-			System.out.println(key.key + " " + down);
 		}
 	}
-
 }
 
