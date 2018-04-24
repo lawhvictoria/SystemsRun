@@ -4,6 +4,7 @@ import java.awt.event.ComponentEvent;
 import javax.swing.JFrame;
 import processing.awt.PSurfaceAWT.SmoothCanvas;
 import processing.core.PApplet;
+import processing.event.Event;
 
 
 public class App extends PApplet
@@ -47,7 +48,7 @@ public class App extends PApplet
             		jf.setSize(jf.getWidth(), jf.getWidth() * INITIAL_HEIGHT/INITIAL_WIDTH);
             }
         });
-
+                
         // Put this somewhere else 
         world = new World();
     }

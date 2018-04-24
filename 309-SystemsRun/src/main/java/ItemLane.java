@@ -34,15 +34,17 @@ public class ItemLane {
 		
 		switch(rand.nextInt(3)) {
 		case 0:
-			item = new BeerItem(world);
+			item = new PopQuizItem(world);
 			break;
-		
+			
 		case 1:
-			item = new BeerItem(world);
+			item = new SegFaultItem(world);
 			break;
+			
 		case 2:	
-			item = new BeerItem(world);
+			item = new ForkBombItem(world);
 			break;
+			
 		default:
 			item = new BeerItem(world);
 		}
@@ -61,6 +63,10 @@ public class ItemLane {
 		item.setY(startY);
 		items.add(item);
 		
+	}
+	
+	public void removeItem(Item item) {
+		items.remove(item);
 	}
 	
 	public void moveItems(float speed) {
@@ -92,6 +98,16 @@ public class ItemLane {
 		float angle = (float) Math.atan(xL/yL);
 		
 		return startX + (float)Math.tan(angle) * (y-startY) * Math.signum(endX - startX);
+	}
+	
+	public Item checkCollision(float y, float range) {
+		for(int i = 0; i < items.size(); i++) {
+			if(items.get(i).getY() > y - range && items.get(i).getY() < y + range) {
+				return items.get(i);
+			}
+		}
+		
+		return null;
 	}
 }
 

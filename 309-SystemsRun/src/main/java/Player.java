@@ -9,7 +9,6 @@ public class Player implements Drawable, Controllable{
 	public float speedX = 1;
 	public float speedY = 1;
 	
-	private float speedVelX = 0;
 	private float speedVelY = 0;
 	
 	private ItemLane targetLane;
@@ -35,6 +34,13 @@ public class Player implements Drawable, Controllable{
 		
 		if(Math.abs(x - targetX) < 2) {
 			x = targetX;
+			
+			Item hit;
+			if((hit = targetLane.checkCollision(y, 2)) != null) {
+				targetLane.removeItem(hit);
+				world.removeObject(hit);
+				
+			}
 		}
 		else if(x < targetX) {
 			x += speedX;

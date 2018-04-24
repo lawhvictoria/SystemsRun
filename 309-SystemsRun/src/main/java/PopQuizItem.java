@@ -1,12 +1,12 @@
 
 public class PopQuizItem extends Item{
 	public PopQuizItem() {
-		super("src/images/cat.png");
+		super("src/images/popQuiz.png");
 		setupWeights();
 	}
 	
 	public PopQuizItem(World world) {
-		super("src/images/cat.png", world);
+		super("src/images/popQuiz.png", world);
 		setupWeights();
 	}
 	

@@ -2,12 +2,12 @@
 public class SegFaultItem extends Item{
 
 	public SegFaultItem() {
-		super("src/images/cat.png");
+		super("src/images/SegFault.png");
 		setupWeights();
 	}
 	
 	public SegFaultItem(World world) {
-		super("src/images/cat.png", world);
+		super("src/images/SegFault.png", world);
 		setupWeights();
 	}
 	

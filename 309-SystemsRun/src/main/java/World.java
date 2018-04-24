@@ -7,6 +7,7 @@ import java.util.Random;
 
 public class World {
 	private ArrayList<Drawable> objects = new ArrayList<Drawable>();
+	private ArrayList<Drawable> killed = new ArrayList<Drawable>();
 	private ArrayList<ItemLane> lanes = new ArrayList<ItemLane>();
 	Random rand = new Random();
 	
@@ -32,9 +33,10 @@ public class World {
 	public void update() {
 		drawAllWorldObjects();
 		moveAllLanes();
-		if(rand.nextInt(10) == 0) {
+		if(rand.nextInt(30) == 0) {
 			spawnItem();
 		}
+		cleanKillList();
 		
 	}
 	
@@ -59,7 +61,12 @@ public class World {
 	}
 	
 	public void removeObject(Drawable obj) {
-		objects.remove(obj);
+		killed.add(obj);
+	}
+	
+	public void cleanKillList() {
+		objects.removeAll(killed);
+		killed.clear();
 	}
 	
 	public ItemLane getLeftLane(ItemLane lane) {

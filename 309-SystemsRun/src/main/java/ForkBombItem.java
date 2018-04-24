@@ -1,12 +1,12 @@
 
 public class ForkBombItem extends Item{
 	public ForkBombItem() {
-		super("src/images/cat.png");
+		super("src/images/forkbomb.png");
 		setupWeights();
 	}
 	
 	public ForkBombItem(World world) {
-		super("src/images/cat.png", world);
+		super("src/images/forkbomb.png", world);
 		setupWeights();
 	}
 	
