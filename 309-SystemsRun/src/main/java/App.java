@@ -32,7 +32,7 @@ public class App extends PApplet {
 
         // Setup minimum window dimensions, allow resize of window
         SmoothCanvas sc = (SmoothCanvas) getSurface().getNative();
-        JFrame jf = (JFrame) sc.getFrame();
+        final JFrame jf = (JFrame) sc.getFrame();
         Dimension d = new Dimension(MIN_WIDTH, MIN_HEIGHT);
         jf.setMinimumSize(d);
         surface.setResizable(true);

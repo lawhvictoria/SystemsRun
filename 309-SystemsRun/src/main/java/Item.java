@@ -11,14 +11,13 @@ public abstract class Item implements Drawable {
     // Public Instance
     public float deltaSocial, deltaGrade, deltaSleep;
     public PImage img;
-    
+
     // Private Instance
     private float x, y;
     private World world;
 
-    
     public Item(String imgRef, World world) {
-        
+
         this(imgRef);
         addItem(world);
     }
@@ -56,7 +55,7 @@ public abstract class Item implements Drawable {
     }
 
     public void setY(float yD) {
-        
+
         y = yD;
 
         if (y > Y_DESPAWN_RANGE) {
