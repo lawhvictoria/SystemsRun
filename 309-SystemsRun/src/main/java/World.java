@@ -4,14 +4,15 @@ import java.util.Random;
 /*
  * Keep track of objects, score, game ticks, etc.
  */
-
 public class World {
-	private ArrayList<Drawable> objects = new ArrayList<Drawable>();
+	
+    // Private Instance
+    private ArrayList<Drawable> objects = new ArrayList<Drawable>();
 	private ArrayList<Drawable> killed = new ArrayList<Drawable>();
 	private ArrayList<ItemLane> lanes = new ArrayList<ItemLane>();
-	Random rand = new Random();
+	private Random rand = new Random();
 	
-	public World() { // TEST ITEMS
+	public World() {
 		
 		ItemLane lane1 = new ItemLane(this, 30, 0, 20, 100);
 		lane1.debugtoggleDisplay();
@@ -26,18 +27,17 @@ public class World {
 		lanes.add(lane3);
 		
 		Player player = new Player(this, 50, 50);
-		player.putInLane(lane2);
-		
+		player.putInLane(lane2);		
 	}
 	
 	public void update() {
-		drawAllWorldObjects();
+		
+	    drawAllWorldObjects();
 		moveAllLanes();
 		if(rand.nextInt(30) == 0) {
 			spawnItem();
 		}
-		cleanKillList();
-		
+		cleanKillList();		
 	}
 	
 	public void spawnItem() {
@@ -45,13 +45,15 @@ public class World {
 	}
 	
 	public void moveAllLanes() {
-		for(ItemLane lane : lanes) {
+		
+	    for(ItemLane lane : lanes) {
 			lane.moveItems();
 		}
 	}
 	
 	public void drawAllWorldObjects() {
-		for(Drawable obj : objects) {
+		
+	    for(Drawable obj : objects) {
 			obj.draw();
 		}
 	}
@@ -65,17 +67,20 @@ public class World {
 	}
 	
 	public void cleanKillList() {
-		objects.removeAll(killed);
+		
+	    objects.removeAll(killed);
 		killed.clear();
 	}
 	
 	public ItemLane getLeftLane(ItemLane lane) {
-		int index = lanes.indexOf(lane);
+		
+	    int index = lanes.indexOf(lane);
 		return index > 0 ? lanes.get(index - 1) : lane;
 	}
 	
 	public ItemLane getRightLane(ItemLane lane) {
-		int index = lanes.indexOf(lane);
+		
+	    int index = lanes.indexOf(lane);
 		return index < lanes.size() - 1 ? lanes.get(index + 1) : lane; 
 	}
 }
