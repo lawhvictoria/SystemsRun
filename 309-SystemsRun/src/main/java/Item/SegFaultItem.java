@@ -1,0 +1,31 @@
+package Item;
+import Control.Player;
+import Control.World;
+
+public class SegFaultItem extends Item {
+
+    public SegFaultItem() {
+        
+        super("src/images/SegFault.png");
+        setupWeights();
+    }
+
+    public SegFaultItem(World world) {
+        
+        super("src/images/SegFault.png", world);
+        setupWeights();
+    }
+
+    private void setupWeights() {
+        
+        deltaSleep = 0;
+        deltaGrade = 0;
+        deltaSocial = 0;
+    }
+
+    @Override
+    public void itemEffect(Player player) {
+        // TODO: Kill player
+    }
+
+}
