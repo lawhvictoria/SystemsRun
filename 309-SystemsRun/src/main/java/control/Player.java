@@ -1,8 +1,8 @@
-package Control;
-import GUI.Draw;
-import GUI.Drawable;
-import Item.Item;
-import Control.ItemLane;
+package control;
+import gui.Draw;
+import gui.Drawable;
+import item.Item;
+import control.ItemLane;
 import processing.core.PImage;
 
 public class Player implements Drawable, Controllable {

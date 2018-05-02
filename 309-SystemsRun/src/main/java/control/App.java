@@ -1,10 +1,10 @@
-package Control;
+package control;
 import java.awt.Dimension;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import javax.swing.JFrame;
 
-import GUI.Draw;
+import gui.Draw;
 import processing.awt.PSurfaceAWT.SmoothCanvas;
 import processing.core.PApplet;
 
@@ -21,7 +21,7 @@ public class App extends PApplet {
 
     // Main
     public static void main(String[] args) {
-        PApplet.main("Control.App");
+        PApplet.main("control.App");
 
     }
 

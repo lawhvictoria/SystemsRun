@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 /*
  * Anything that can be drawn to the screen should implement this class.
  */

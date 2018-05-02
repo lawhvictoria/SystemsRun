@@ -1,8 +1,8 @@
-package Item;
-import Control.Player;
-import Control.World;
-import GUI.Draw;
-import GUI.Drawable;
+package item;
+import control.Player;
+import control.World;
+import gui.Draw;
+import gui.Drawable;
 import processing.core.PImage;
 
 /*

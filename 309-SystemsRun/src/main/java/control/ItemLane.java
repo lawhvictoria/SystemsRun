@@ -1,13 +1,13 @@
-package Control;
+package control;
 import java.util.ArrayList;
 import java.util.Random;
 
-import GUI.Draw;
-import Item.BeerItem;
-import Item.ForkBombItem;
-import Item.Item;
-import Item.PopQuizItem;
-import Item.SegFaultItem;
+import gui.Draw;
+import item.BeerItem;
+import item.ForkBombItem;
+import item.Item;
+import item.PopQuizItem;
+import item.SegFaultItem;
 
 public class ItemLane {
 

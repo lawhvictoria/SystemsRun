@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 public class Bar implements Drawable {
 
     private int value;

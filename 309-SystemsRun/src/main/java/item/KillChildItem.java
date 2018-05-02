@@ -1,7 +1,7 @@
-package Item;
-import Control.Player;
-import Control.World;
-import GUI.Draw;
+package item;
+import control.Player;
+import control.World;
+import gui.Draw;
 
 public class KillChildItem extends Item {
 

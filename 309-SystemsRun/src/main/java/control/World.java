@@ -1,8 +1,8 @@
-package Control;
+package control;
 import java.util.ArrayList;
 import java.util.Random;
 
-import GUI.Drawable;
+import gui.Drawable;
 
 /*
  * Keep track of objects, score, game ticks, etc.

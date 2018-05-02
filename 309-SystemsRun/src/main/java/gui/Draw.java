@@ -1,5 +1,5 @@
-package GUI;
-import Control.App;
+package gui;
+import control.App;
 import processing.core.*;
 
 public class Draw {

@@ -1,6 +1,6 @@
-package Item;
-import Control.Player;
-import Control.World;
+package item;
+import control.Player;
+import control.World;
 
 public class SegFaultItem extends Item {
 
