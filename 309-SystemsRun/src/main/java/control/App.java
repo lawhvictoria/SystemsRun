@@ -24,12 +24,14 @@ public class App extends PApplet {
         PApplet.main("control.App");
 
     }
-
+    
+    @Override
     public void settings() {
         size(INITIAL_WIDTH, INITIAL_HEIGHT);
         Draw.setApplet(this);
     }
 
+    @Override
     public void setup() {
         surface.setTitle("Systems Run");
 
@@ -42,6 +44,7 @@ public class App extends PApplet {
 
         // Lock screen aspect
         jf.addComponentListener(new ComponentAdapter() {
+        		@Override
             public void componentResized(ComponentEvent e) {
                 jf.setSize(jf.getWidth(), jf.getWidth() * INITIAL_HEIGHT / INITIAL_WIDTH);
             }
@@ -51,14 +54,17 @@ public class App extends PApplet {
         world = new World();
     }
 
+    @Override
     public void keyPressed() {
         Controller.keyUpdate(key, true);
     }
 
+    @Override
     public void keyReleased() {
         Controller.keyUpdate(key, false);
     }
 
+    @Override
     public void draw() {
         background(200, 200, 200);
         world.update();
