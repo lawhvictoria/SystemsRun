@@ -12,7 +12,7 @@ public class Controller {
 
     public static void keyUpdate(char key, boolean down) {
         for (Key control : Key.values()) {
-            if (control.key == key) {
+            if (control.k == key) {
                 notifyListeners(control, down);
             }
         }
