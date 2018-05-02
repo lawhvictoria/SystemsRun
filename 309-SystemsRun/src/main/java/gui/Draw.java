@@ -5,8 +5,8 @@ import processing.core.*;
 public class Draw {
 
     // Constants
-    public final static float DEPTH_MIN = .6f;
-    public final static float DEPTH_MAX = 1.0f;
+    public static final float DEPTH_MIN = .6f;
+    public static final float DEPTH_MAX = 1.0f;
 
     // Private Static
     private static int dim = 1;
