@@ -15,7 +15,8 @@ public class Player implements Drawable, Controllable {
     private float speedVelY = 0;
     private ItemLane targetLane;
     private World world;
-    private float x, y;
+    private float x;
+    private float y;
     private PImage img;
 
     public Player(World world, float x, float y) {
