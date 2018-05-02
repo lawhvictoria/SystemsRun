@@ -1,5 +1,6 @@
 package control;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import gui.Draw;
@@ -12,8 +13,11 @@ import item.SegFaultItem;
 public class ItemLane {
 
     // Public Instance
-    public float startX, startY, endX, endY;
-    public ArrayList<Item> items;
+    public float startX;
+    public float startY;
+    public float endX;
+    public float endY;
+    public List<Item> items;
     public float speed = .3f;
 
     // Private Instance
