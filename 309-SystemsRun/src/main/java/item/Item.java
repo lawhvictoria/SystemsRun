@@ -11,14 +11,17 @@ import processing.core.PImage;
 public abstract class Item implements Drawable {
 
     // Constants
-    public final static float Y_DESPAWN_RANGE = 100;
+    public static final float Y_DESPAWN_RANGE = 100;
 
     // Public Instance
-    public float deltaSocial, deltaGrade, deltaSleep;
+    public float deltaSocial;
+    public float deltaGrade;
+    public float deltaSleep;
     public PImage img;
 
     // Private Instance
-    private float x, y;
+    private float x;
+    private float y;
     private World world;
 
     public Item(String imgRef, World world) {
