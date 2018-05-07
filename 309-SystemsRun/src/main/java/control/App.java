@@ -19,10 +19,6 @@ public class App extends PApplet {
     
     // menus
     int state = 0; //The current state
-    final int MAIN_MENU = 0;
-    final int GAME_MENU = 1;
-    final int GAME = 2;
-    final int PAUSE = 3;
     boolean click = false;
     PImage img;
     PImage img2;
