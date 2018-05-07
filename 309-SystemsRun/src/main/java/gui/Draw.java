@@ -5,7 +5,7 @@ import processing.core.*;
 public class Draw {
 
     // Constants
-    public static final float DEPTH_MIN = .6f;
+    public static final float DEPTH_MIN = 0.2f;
     public static final float DEPTH_MAX = 1.0f;
 
     // Private Static
@@ -19,6 +19,10 @@ public class Draw {
 
     public static PImage loadImage(String imgRef) {
         return app.loadImage(imgRef);
+    }
+    
+    public static void drawImage(PImage img) {
+        drawImage(img, 50, 50);
     }
 
     public static void drawImage(PImage img, float xUnscaled, float yUnscaled) {
@@ -82,5 +86,22 @@ public class Draw {
             return true;
         }
         return false;
+    }
+    
+    public static float getWidth() {
+        return app.width;
+    }
+    
+    public static float getHeight() {
+        return app.height;
+    }
+    
+    // Note: does not account for dimensions. Intended for use in GUI
+    public static float scaleX(float x) {
+        return (float) app.width / App.INITIAL_WIDTH * x;
+    }
+    
+    public static float scaleY(float y) {
+        return (float) app.height / App.INITIAL_HEIGHT * y;
     }
 }

@@ -1,9 +1,8 @@
 package control;
 import gui.Draw;
 import gui.Drawable;
+import gui.PImage2;
 import item.Item;
-import control.ItemLane;
-import processing.core.PImage;
 
 public class Player implements Drawable, Controllable {
 
@@ -17,7 +16,7 @@ public class Player implements Drawable, Controllable {
     private World world;
     private float x;
     private float y;
-    private PImage img;
+    private PImage2 img;
 
     public Player(World world, float x, float y) {
 
@@ -25,7 +24,8 @@ public class Player implements Drawable, Controllable {
         this.x = x;
         this.y = y;
 
-        img = Draw.loadImage("src/images/cat.png");
+        img = new PImage2(4, "src/images/running0.png", "src/images/running1.png", "src/images/running2.png", "src/images/running3.png");
+                //Draw.loadImage("src/images/cat.png");
         world.addObject(this);
         Controller.addListener(this);
     }
@@ -33,7 +33,7 @@ public class Player implements Drawable, Controllable {
     public void draw() {
 
         move();
-        Draw.drawImage(img, x, y, Draw.getZDepth(y));
+        Draw.drawImage(img.getImage(), x, y, Draw.getZDepth(y));
     }
 
     public void addSocial(float delta) {
@@ -104,4 +104,6 @@ public class Player implements Drawable, Controllable {
     public void putInLane(ItemLane lane) {
         targetLane = lane;
     }
+    
+    public void clickUpdate(float x, float y) {};
 }

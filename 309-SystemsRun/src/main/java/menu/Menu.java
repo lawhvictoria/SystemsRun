@@ -1,16 +1,23 @@
 package menu;
 
 import java.util.ArrayList;
+import control.App;
+import control.DrawGroup;
 import gui.Drawable;
 
-public abstract class Menu {
+public abstract class Menu implements DrawGroup {
     ArrayList<Drawable> elements;
+    protected App app;
     
-    public Menu() {
+    public Menu(App app, String imgSrc) {
+        this.app = app;
         elements = new ArrayList<Drawable>();
+        elements.add(new Background(imgSrc));
+        display();
+        
     }
     
-    public void draw() {
+    public void update() {
         for(Drawable el : elements) {
             el.draw();
         }

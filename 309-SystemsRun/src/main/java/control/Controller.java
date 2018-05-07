@@ -17,10 +17,22 @@ public class Controller {
             }
         }
     }
+    
+    public static void clickUpdate(int x, int y) {
+          notifyListeners(App.toWorldX(x), App.toWorldY(y));
+    }
 
     private static void notifyListeners(Key key, boolean down) {
         for (Controllable listener : controllers) {
             listener.keyUpdate(key, down);
         }
     }
+    
+    private static void notifyListeners(float x, float y) {
+        for (Controllable listener : controllers) {
+             listener.clickUpdate(x,  y);
+        }
+    }
+    
+    
 }

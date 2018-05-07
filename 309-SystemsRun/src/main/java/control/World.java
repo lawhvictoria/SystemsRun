@@ -3,11 +3,12 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import gui.Drawable;
+import menu.Background;
 
 /*
  * Keep track of objects, score, game ticks, etc.
  */
-public class World {
+public class World implements DrawGroup{
 	
     // Private Instance
     private ArrayList<Drawable> objects = new ArrayList<Drawable>();
@@ -16,16 +17,19 @@ public class World {
 	private Random rand = new Random();
 	
 	public World() {
-		
-		ItemLane lane1 = new ItemLane(this, 30, 0, 20, 100);
+	    objects.add(new Background("src/images/playBackground00.png", 
+	                               "src/images/playBackground01.png", 
+	                               "src/images/playBackground02.png"));
+	    
+		ItemLane lane1 = new ItemLane(this, 47, 10.5f, 15, 100);
 		lane1.debugtoggleDisplay();
 		lanes.add(lane1);
 		
-		ItemLane lane2 = new ItemLane(this, 50, 0, 50, 100);
+		ItemLane lane2 = new ItemLane(this, 50, 10.5f, 50, 100);
 		lane2.debugtoggleDisplay();
 		lanes.add(lane2);
 		
-		ItemLane lane3 = new ItemLane(this, 70, 0, 80, 100);
+		ItemLane lane3 = new ItemLane(this, 53, 10.5f, 85, 100);
 		lane3.debugtoggleDisplay();
 		lanes.add(lane3);
 		
@@ -69,8 +73,7 @@ public class World {
 		killed.add(obj);
 	}
 	
-	public void cleanKillList() {
-		
+	public void cleanKillList() {		
 	    objects.removeAll(killed);
 		killed.clear();
 	}
