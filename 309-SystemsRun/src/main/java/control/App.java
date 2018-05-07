@@ -109,4 +109,8 @@ public class App extends PApplet {
     public void loadDrawGroup(int state) {
         currentView = menu[state];
     }
+    
+    public void close() {
+        exit();
+    }
 }

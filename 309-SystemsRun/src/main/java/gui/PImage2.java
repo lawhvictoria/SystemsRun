@@ -1,7 +1,6 @@
 package gui;
 
 import control.App;
-import processing.core.PApplet;
 import processing.core.PImage;
 
 public class PImage2{

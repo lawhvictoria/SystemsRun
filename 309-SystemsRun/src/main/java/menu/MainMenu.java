@@ -17,6 +17,7 @@ public class MainMenu extends Menu {
         elements.add(new TutorialButton(12, 95, app));
         elements.add(new SettingsButton(91, 95, app));
         elements.add(new AppendixButton(86, 95, app));
+        elements.add(new ExitButton(97, 5, app));
     }
 
     @Override
