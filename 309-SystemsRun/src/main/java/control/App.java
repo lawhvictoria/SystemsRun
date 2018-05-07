@@ -113,22 +113,22 @@ public class App extends PApplet {
     }
     
     public void mousePressed() {
-    		if (mouseX < 624 & mouseX > 352 & mouseY < 508 & mouseY > 408 ) {
+    		if (mouseX < 624 && mouseX > 352 && mouseY < 508 && mouseY > 408 ) {
     			click = true;
     			state = 1;
     		}
     		
-    		if (mouseX < 582 & mouseX > 398 & mouseY < 593 & mouseY > 525 ) {
+    		if (mouseX < 582 && mouseX > 398 && mouseY < 593 && mouseY > 525 ) {
     			click = true;
     			state = 2;
     		}
     		
-    		if (mouseX < 582 & mouseX > 398 & mouseY < 671 & mouseY > 603 ) {
+    		if (mouseX < 582 && mouseX > 398 && mouseY < 671 && mouseY > 603 ) {
     			click = true;
     			state = 3;
     		}
     		
-    		if (mouseX < 1026 & mouseX > 946 & mouseY < 726 & mouseY > 646 ) {
+    		if (mouseX < 1026 && mouseX > 946 && mouseY < 726 && mouseY > 646 ) {
     			click = true;
     			state = 0;
     		}
