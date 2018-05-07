@@ -45,7 +45,7 @@ public class App extends PApplet {
     		dimg = loadImage("src/images/playBackground.gif");
     		img = loadImage("src/images/mainScreen.png");
     		img2 = loadImage("src/images/characterSettings.png");
-    		img3 = loadImage("src/images/highscores.png");
+    		img3 = loadImage("src/images/highScores.png");
     		
         surface.setTitle("Systems Run");
 
