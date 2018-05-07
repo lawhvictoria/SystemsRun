@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import gui.Draw;
 import processing.awt.PSurfaceAWT.SmoothCanvas;
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class App extends PApplet {
 
@@ -15,6 +16,15 @@ public class App extends PApplet {
     public static final int MIN_HEIGHT = 175;
     public static final int INITIAL_WIDTH = 1000;
     public static final int INITIAL_HEIGHT = 700;
+    
+    // menus
+    int state = 0; //The current state
+    final int MAIN_MENU = 0;
+    final int GAME_MENU = 1;
+    final int GAME = 2;
+    final int PAUSE = 3;
+    boolean click = false;
+    PImage img;
 
     // Private Instance
     private World world; // TODO: Move this elsewhere
@@ -33,6 +43,8 @@ public class App extends PApplet {
 
     @Override
     public void setup() {
+    		img = loadImage("src/images/mainScreen.png");
+    		
         surface.setTitle("Systems Run");
 
         // Setup minimum window dimensions, allow resize of window
@@ -66,7 +78,14 @@ public class App extends PApplet {
 
     @Override
     public void draw() {
-        background(200, 200, 200);
-        world.update();
+    		if (state == 0) {
+    			image(img, 0, 0);
+    		}
     }
+    
+    public void mousePressed() {
+    		if (mouseX < 425 & mouseX > 125 & mouseY <450 & mouseY >300 ) {
+    			click = true;
+    		}
+    	}
 }
