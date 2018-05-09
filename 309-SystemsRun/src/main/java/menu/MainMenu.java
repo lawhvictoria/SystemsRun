@@ -20,9 +20,4 @@ public class MainMenu extends Menu {
         elements.add(new ExitButton(97, 5, app));
     }
 
-    @Override
-    public void hide() {
-        elements.clear();        
-    }
-
 }

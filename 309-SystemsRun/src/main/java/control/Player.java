@@ -24,8 +24,11 @@ public class Player implements Drawable, Controllable {
         this.x = x;
         this.y = y;
 
-        img = new PImage2(4, "src/images/running0.png", "src/images/running1.png", "src/images/running2.png", "src/images/running3.png");
-                //Draw.loadImage("src/images/cat.png");
+        img = new PImage2(4, "src/images/running0.png", 
+                             "src/images/running1.png", 
+                             "src/images/running2.png", 
+                             "src/images/running3.png");
+           
         world.addObject(this);
         Controller.addListener(this);
     }

@@ -25,5 +25,7 @@ public abstract class Menu implements DrawGroup {
     
     public abstract void display();
     
-    public abstract void hide();
+    public void hide() {
+        elements.clear();        
+    }
 }
