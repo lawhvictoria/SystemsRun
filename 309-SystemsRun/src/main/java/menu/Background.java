@@ -16,7 +16,7 @@ public class Background implements Drawable{
                 //Draw.loadImage(imgSrc);
     }
     
-    @Override
+//    @Override
     public void draw() {
         Draw.drawImage(img.getImage());
     }

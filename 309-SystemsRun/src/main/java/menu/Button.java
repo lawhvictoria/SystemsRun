@@ -82,7 +82,7 @@ public abstract class Button implements Drawable, Controllable {
         return clicked;
     }
     
-    @Override
+ //   @Override
     public void draw() {
         Draw.drawImage(imgCurrent, x, y);
         checkHover();
@@ -126,7 +126,7 @@ public abstract class Button implements Drawable, Controllable {
         }        
     }
     
-    @Override
+//    @Override
     public void keyUpdate(Key key, boolean down) {};
     
     
