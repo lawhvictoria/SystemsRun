@@ -35,13 +35,15 @@ public class App extends PApplet {
         PApplet.main("control.App");
 
     }
-
+    
+    @Override
     public void settings() {
         size(INITIAL_WIDTH, INITIAL_HEIGHT);
         Draw.setApplet(this);
         lastTime = System.currentTimeMillis();
     }
 
+    @Override
     public void setup() {
         surface.setTitle("Systems Run");
 
@@ -54,30 +56,36 @@ public class App extends PApplet {
 
         // Lock screen aspect
         jf.addComponentListener(new ComponentAdapter() {
+        	@Override
             public void componentResized(ComponentEvent e) {
                 jf.setSize(jf.getWidth(), jf.getWidth() * INITIAL_HEIGHT / INITIAL_WIDTH);
             }
         });
 
         // TODO: Move this call elsewhere       
-        menu[0] = new MainMenu(this);;
+        menu[0] = new MainMenu(this);
         menu[1] = new World();
+       // menu[2] = new SettingsMenu(this);
         
         currentView = menu[0];
     }
 
+    @Override
     public void keyPressed() {
         Controller.keyUpdate(key, true);
     }
-
+    
+    @Override
     public void keyReleased() {
         Controller.keyUpdate(key, false);
     }
     
+    @Override
     public void mouseClicked() {
         Controller.clickUpdate(mouseX, mouseY);
     }
-
+    
+    @Override
     public void draw() {
         background(200, 200, 200);
         currentView.update();
