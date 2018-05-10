@@ -13,7 +13,7 @@ public class SettingsMenu extends Menu{
         // create buttons in right spots and add to elements array
     		elements.add(new MuteButton(18, 41, app));
 		elements.add(new MuteButton(18, 61, app));
-		elements.add(new easyButton(18, 82, app));
-		elements.add(new mediumButton(34, 82, app));
+		elements.add(new EasyButton(18, 82, app));
+		elements.add(new MediumButton(34, 82, app));
     }
 }
