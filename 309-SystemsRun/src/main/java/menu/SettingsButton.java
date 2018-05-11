@@ -12,8 +12,7 @@ public class SettingsButton extends Button {
 
     @Override
     public void onClickAction(boolean clicked) {
-        
-        
+    		app.loadDrawGroup(2);
     }
 
 }

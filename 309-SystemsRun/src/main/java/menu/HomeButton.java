@@ -12,6 +12,6 @@ public class HomeButton extends Button{
 
     @Override
     public void onClickAction(boolean clicked) {
-        
+    		app.loadDrawGroup(0);
     }
 }
