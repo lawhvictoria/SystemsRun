@@ -6,7 +6,9 @@ import java.awt.event.ComponentEvent;
 import javax.swing.JFrame;
 
 import gui.Draw;
+import menu.CharacterMenu;
 import menu.MainMenu;
+import menu.SettingsMenu;
 import processing.awt.PSurfaceAWT.SmoothCanvas;
 import processing.core.PApplet;
 
@@ -65,7 +67,8 @@ public class App extends PApplet {
         // TODO: Move this call elsewhere       
         menu[0] = new MainMenu(this);
         menu[1] = new World();
-       // menu[2] = new SettingsMenu(this);
+        menu[2] = new SettingsMenu(this);
+        menu[3] = new CharacterMenu(this);
         
         currentView = menu[0];
     }
