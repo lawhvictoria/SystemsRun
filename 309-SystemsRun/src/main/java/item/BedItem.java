@@ -6,13 +6,13 @@ public class BedItem extends Item {
 
     public BedItem() {
         
-        super("src/images/cat.png");
+        super("src/images/sleep.png");
         setupWeights();
     }
 
     public BedItem(World world) {
         
-        super("src/images/cat.png", world);
+        super("src/images/sleep.png", world);
         setupWeights();
     }
 

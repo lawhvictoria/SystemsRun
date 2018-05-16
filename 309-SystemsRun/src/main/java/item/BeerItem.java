@@ -6,13 +6,13 @@ public class BeerItem extends Item {
 
     public BeerItem() {
         
-        super("src/images/cat.png");
+        super("src/images/beer.png");
         setupWeights();
     }
 
     public BeerItem(World world) {
         
-        super("src/images/cat.png", world);
+        super("src/images/beer.png", world);
         setupWeights();
     }
 

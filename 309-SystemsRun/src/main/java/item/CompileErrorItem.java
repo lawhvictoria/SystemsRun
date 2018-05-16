@@ -6,13 +6,13 @@ public class CompileErrorItem extends Item {
     
     public CompileErrorItem() {
         
-        super("src/images/cat.png");
+        super("src/images/terminal.png");
         setupWeights();
     }
 
     public CompileErrorItem(World world) {
         
-        super("src/images/cat.png", world);
+        super("src/images/terminal.png", world);
         setupWeights();
     }
 

@@ -7,13 +7,13 @@ public class KillChildItem extends Item {
 
     public KillChildItem() {
         
-        super("src/images/cat.png");
+        super("src/images/kill.png");
         setupWeights();
     }
 
     public KillChildItem(World world) {
         
-        super("src/images/cat.png", world);
+        super("src/images/kill.png", world);
         setupWeights();
     }
 
@@ -26,6 +26,7 @@ public class KillChildItem extends Item {
 
     @Override
     public void itemEffect(Player player) {
+    		Draw.subtractDimension();
         if (!Draw.subtractDimension()) {
             // kill player
         }

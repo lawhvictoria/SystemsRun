@@ -34,7 +34,7 @@ public abstract class Item implements Drawable {
         img = Draw.loadImage(imgRef);
     }
 
-    @Override
+//    @Override
     public void draw() {
         Draw.drawImage(img, x, y, Draw.getZDepth(y));
     }

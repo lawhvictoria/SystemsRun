@@ -6,13 +6,13 @@ public class BookItem extends Item {
     
     public BookItem() {
         
-        super("src/images/cat.png");
+        super("src/images/book.png");
         setupWeights();
     }
 
     public BookItem(World world) {
         
-        super("src/images/cat.png", world);
+        super("src/images/book.png", world);
         setupWeights();
     }
 

@@ -6,13 +6,13 @@ public class PipeItem extends Item {
 
     public PipeItem() {
         
-        super("src/images/cat.png");
+        super("src/images/Pipe.png");
         setupWeights();
     }
 
     public PipeItem(World world) {
         
-        super("src/images/cat.png", world);
+        super("src/images/Pipe.png", world);
         setupWeights();
     }
 
