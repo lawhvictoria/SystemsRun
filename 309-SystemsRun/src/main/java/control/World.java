@@ -4,6 +4,7 @@ import java.util.Random;
 
 import gui.Drawable;
 import menu.Background;
+import processing.core.PImage;
 
 /*
  * Keep track of objects, score, game ticks, etc.
@@ -16,10 +17,12 @@ public class World implements DrawGroup{
 	private ArrayList<ItemLane> lanes = new ArrayList<ItemLane>();
 	private Random rand = new Random();
 	
+	
 	public World() {
 	    objects.add(new Background("src/images/playBackground00.png", 
 	                               "src/images/playBackground01.png", 
 	                               "src/images/playBackground02.png"));
+	    objects.add(new Background("src/images/PlayOverlay.png"));
 	    
 		ItemLane lane1 = new ItemLane(this, 47, 10.5f, 15, 100);
 		lane1.debugtoggleDisplay();

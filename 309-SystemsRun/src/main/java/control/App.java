@@ -6,13 +6,17 @@ import java.awt.event.ComponentEvent;
 import javax.swing.JFrame;
 
 import gui.Draw;
+import gui.Drawable;
+import menu.Background;
 import menu.CharacterMenu;
 import menu.MainMenu;
+import menu.PlayMenu;
 import menu.SettingsMenu;
 import processing.awt.PSurfaceAWT.SmoothCanvas;
 import processing.core.PApplet;
+import processing.core.PImage;
 
-public class App extends PApplet {
+public class App extends PApplet implements Drawable{
 
     // Constants
     public static final int MIN_WIDTH = 250;
@@ -21,6 +25,8 @@ public class App extends PApplet {
     public static final int INITIAL_HEIGHT = 700;
     
     public static final int TARGET_FPS = 30;
+    
+    public PImage img;
 
     // Private Instance
     //private World world; // TODO: Move this elsewhere
@@ -64,13 +70,20 @@ public class App extends PApplet {
             }
         });
 
+        img = loadImage("src/images/PlayOverlay.png");
+        
         // TODO: Move this call elsewhere       
         menu[0] = new MainMenu(this);
         menu[1] = new World();
+//        menu[1] = new PlayMenu(this);
         menu[2] = new SettingsMenu(this);
         menu[3] = new CharacterMenu(this);
         
         currentView = menu[0];
+        
+     
+//        menu[1] = image1.blend(image2, 0, 0, image2.width, image2.height, 0, 0, image2.width, image2.height, ADD);
+
     }
 
     @Override
