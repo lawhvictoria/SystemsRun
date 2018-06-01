@@ -7,10 +7,10 @@ import javax.swing.JFrame;
 
 import gui.Draw;
 import gui.Drawable;
+import highScore.HighScore;
 import menu.Background;
 import menu.CharacterMenu;
 import menu.MainMenu;
-import menu.PlayMenu;
 import menu.SettingsMenu;
 import processing.awt.PSurfaceAWT.SmoothCanvas;
 import processing.core.PApplet;
@@ -29,7 +29,7 @@ public class App extends PApplet implements Drawable{
     public PImage img;
 
     // Private Instance
-    //private World world; // TODO: Move this elsewhere
+    //private World world;
     private DrawGroup[] menu = new DrawGroup[5];
     public DrawGroup currentView;
     
@@ -72,17 +72,14 @@ public class App extends PApplet implements Drawable{
 
         img = loadImage("src/images/PlayOverlay.png");
         
-        // TODO: Move this call elsewhere       
         menu[0] = new MainMenu(this);
         menu[1] = new World();
-//        menu[1] = new PlayMenu(this);
         menu[2] = new SettingsMenu(this);
         menu[3] = new CharacterMenu(this);
+        menu[4] = new HighScore(this);
         
         currentView = menu[0];
         
-     
-//        menu[1] = image1.blend(image2, 0, 0, image2.width, image2.height, 0, 0, image2.width, image2.height, ADD);
 
     }
 
