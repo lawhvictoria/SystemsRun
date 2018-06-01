@@ -40,15 +40,12 @@ public class Player implements Drawable, Controllable {
     }
 
     public void addSocial(float delta) {
-        // TODO: Increase bar
     }
 
     public void addSleep(float delta) {
-        // TODO: Increase bar
     }
 
     public void addGrade(float delta) {
-        // TODO: Increase bar
     }
 
     public void move() {
