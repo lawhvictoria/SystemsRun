@@ -8,7 +8,6 @@ import javax.swing.JFrame;
 import gui.Draw;
 import gui.Drawable;
 import highScore.HighScore;
-import menu.Background;
 import menu.CharacterMenu;
 import menu.MainMenu;
 import menu.SettingsMenu;
