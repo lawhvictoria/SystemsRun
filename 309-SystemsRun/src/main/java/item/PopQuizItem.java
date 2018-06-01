@@ -25,6 +25,5 @@ public class PopQuizItem extends Item{
 	
 	@Override
 	public void itemEffect(Player player) {
-		// TODO: 50/50 chance of positive or negative effect
 	}
 }

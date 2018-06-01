@@ -28,6 +28,5 @@ public class ForkBombItem extends Item {
     public void itemEffect(Player player) {
 
         Draw.addDimension();
-        // TODO: Increase bar decay rate
     }
 }

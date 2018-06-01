@@ -25,6 +25,5 @@ public class PipeItem extends Item {
 
     @Override
     public void itemEffect(Player player) {
-        // TODO: Invert keys
     }
 }

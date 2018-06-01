@@ -25,7 +25,6 @@ public class SegFaultItem extends Item {
 
     @Override
     public void itemEffect(Player player) {
-        // TODO: Kill player
     }
 
 }

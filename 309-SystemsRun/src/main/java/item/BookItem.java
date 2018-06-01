@@ -25,6 +25,5 @@ public class BookItem extends Item {
 
     @Override
     public void itemEffect(Player player) {
-        // TODO
     }
 }
