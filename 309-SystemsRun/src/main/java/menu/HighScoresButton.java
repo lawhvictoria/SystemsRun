@@ -12,8 +12,6 @@ public class HighScoresButton extends Button {
 
     @Override
     public void onClickAction(boolean clicked) {
-        
-        
+    		app.loadDrawGroup(4);
     }
-
 }

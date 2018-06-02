@@ -6,7 +6,7 @@ import control.DrawGroup;
 import gui.Drawable;
 
 public abstract class Menu implements DrawGroup {
-    ArrayList<Drawable> elements;
+    protected ArrayList<Drawable> elements;
     protected App app;
     
     public Menu(App app, String imgSrc) {
