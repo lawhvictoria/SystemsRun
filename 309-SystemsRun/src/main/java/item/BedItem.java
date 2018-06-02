@@ -25,6 +25,5 @@ public class BedItem extends Item {
 
     @Override
     public void itemEffect(Player player) {
-    		int num = 1;
     }
 }
