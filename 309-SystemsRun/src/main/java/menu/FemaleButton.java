@@ -11,6 +11,6 @@ public class FemaleButton extends Button{
 
     @Override
     public void onClickAction(boolean clicked) {
-    		
+        delayFrameCount *= 1;
     }
 }

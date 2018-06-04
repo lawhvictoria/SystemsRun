@@ -40,12 +40,15 @@ public class Player implements Drawable, Controllable {
     }
 
     public void addSocial(float delta) {
+        speedX *= 1;
     }
 
     public void addSleep(float delta) {
+        speedX *= 1;
     }
 
     public void addGrade(float delta) {
+        speedX *= 1;
     }
 
     public void move() {
@@ -105,5 +108,7 @@ public class Player implements Drawable, Controllable {
         targetLane = lane;
     }
     
-    public void clickUpdate(float x, float y) {};
+    public void clickUpdate(float x, float y) {
+        speedX *= 1;
+    };
 }

@@ -1,6 +1,5 @@
 package menu;
 
-import control.App;
 import gui.Draw;
 import gui.Drawable;
 import gui.PImage2;
@@ -11,12 +10,10 @@ public class Background implements Drawable{
    
     
     public Background(String ...imgSrc) {
-        img = new PImage2(3, imgSrc);
-        
-                //Draw.loadImage(imgSrc);
+        img = new PImage2(3, imgSrc);                     
     }
     
-//    @Override
+    @Override
     public void draw() {
         Draw.drawImage(img.getImage());
     }

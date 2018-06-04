@@ -65,7 +65,7 @@ public abstract class Button implements Drawable, Controllable {
         }
     }
     
-    private void onHover(boolean over) {
+    private void onHover() {
         hover = !hover;
         
         if(hover && !clicked) {
@@ -82,7 +82,7 @@ public abstract class Button implements Drawable, Controllable {
         return clicked;
     }
     
- //   @Override
+    @Override
     public void draw() {
         Draw.drawImage(imgCurrent, x, y);
         checkHover();
@@ -90,13 +90,11 @@ public abstract class Button implements Drawable, Controllable {
     }
     
     private void checkExecute() {
-        if(startCountdown) {            
-            if(delayFrameCountD-- <= 0) {
-                startCountdown = false;
-                delayFrameCountD = delayFrameCount;
-                onClickAction(clicked);
-            }
-        }
+        if(startCountdown && delayFrameCountD-- <= 0) {
+            startCountdown = false;
+            delayFrameCountD = delayFrameCount;
+            onClickAction(clicked);
+        }        
     }
     
     private void checkHover() {
@@ -107,13 +105,12 @@ public abstract class Button implements Drawable, Controllable {
             App.toWorldY(app.mouseY) < App.toWorldY(App.toRealY(y) + Draw.scaleY(imgCurrent.height/2))) {
                 
             if(!hover) {
-                onHover(true);
+                onHover();
             }
         }        
         else if(hover) {
-            onHover(false);
-        }
-        
+            onHover();
+        }       
     }
     
     public void clickUpdate(float xC, float yC) {                
@@ -126,8 +123,10 @@ public abstract class Button implements Drawable, Controllable {
         }        
     }
     
-//    @Override
-    public void keyUpdate(Key key, boolean down) {};
+    @Override
+    public void keyUpdate(Key key, boolean down) {
+        x *= 1;
+    };
     
     
 }

@@ -5,7 +5,7 @@ import processing.core.PImage;
 
 public class PImage2{
     
-    PImage imgs[];
+    PImage[] imgs;
     private int current = 0;
     private int frameSkip;
     private int curSkip = 0;
@@ -28,7 +28,5 @@ public class PImage2{
             return imgs[current++];
         }
         return imgs[current];
-    }
-    
-    
+    }       
 }

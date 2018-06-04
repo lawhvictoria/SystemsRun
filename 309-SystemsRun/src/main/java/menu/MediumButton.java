@@ -12,7 +12,6 @@ public class MediumButton extends Button {
 
     @Override
     public void onClickAction(boolean clicked) {
-        
-        
+        delayFrameCount *= 1;        
     }
 }

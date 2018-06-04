@@ -1,11 +1,8 @@
 package control;
 import java.util.ArrayList;
 import java.util.Random;
-
 import gui.Drawable;
 import menu.Background;
-import processing.core.PApplet;
-import processing.core.PImage;
 
 /*
  * Keep track of objects, score, game ticks, etc.
@@ -18,7 +15,6 @@ public class World implements DrawGroup{
 	private ArrayList<ItemLane> lanes = new ArrayList<ItemLane>();
 	private Random rand = new Random();
 	
-	private static PApplet app;
     public float redHealth=0;
     public float blueHealth=0;
     public float greenHealth =0;
@@ -96,18 +92,4 @@ public class World implements DrawGroup{
 	    int index = lanes.indexOf(lane);
 		return index < lanes.size() - 1 ? lanes.get(index + 1) : lane; 
 	}
-	
-//    public void drawBars(){
-//  	  app.fill(255);
-//  	  app.rect(0,0,50,app.height);
-//  	  app.rect(0,0,app.width, 40);
-//  	  app.fill(255,0,0); 
-//  	  app.rect(5,app.height-5,10, -750+redHealth);
-//  	  app.fill(0,255,0);
-//  	  app.rect(20,app.height-5,10, -750+greenHealth);
-//  	  app.fill(0,0,255);
-//  	  app.rect(35,app.height-5,10, -750+blueHealth); 
-//  	  app.fill(0);
-//  	  app.rect(10,10,780-totalHealth, 20);
-//  	}
 }

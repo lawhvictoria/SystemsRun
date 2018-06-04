@@ -1,4 +1,4 @@
-package highScore;
+package highscore;
 
 import control.App;
 import menu.Button;

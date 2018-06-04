@@ -25,5 +25,6 @@ public class CompileErrorItem extends Item {
 
     @Override
     public void itemEffect(Player player) {
+        deltaSleep *= 1;
     }
 }

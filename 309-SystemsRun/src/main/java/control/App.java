@@ -1,13 +1,12 @@
 package control;
+
 import java.awt.Dimension;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-
 import javax.swing.JFrame;
-
 import gui.Draw;
 import gui.Drawable;
-import highScore.HighScore;
+import highscore.HighScore;
 import menu.CharacterMenu;
 import menu.MainMenu;
 import menu.SettingsMenu;
@@ -28,7 +27,6 @@ public class App extends PApplet implements Drawable{
     public PImage img;
 
     // Private Instance
-    //private World world;
     private DrawGroup[] menu = new DrawGroup[5];
     public DrawGroup currentView;
     
@@ -40,7 +38,6 @@ public class App extends PApplet implements Drawable{
     // Main
     public static void main(String[] args) {
         PApplet.main("control.App");
-
     }
     
     @Override
@@ -77,9 +74,7 @@ public class App extends PApplet implements Drawable{
         menu[3] = new CharacterMenu(this);
         menu[4] = new HighScore(this);
         
-        currentView = menu[0];
-        
-
+        currentView = menu[0];        
     }
 
     @Override

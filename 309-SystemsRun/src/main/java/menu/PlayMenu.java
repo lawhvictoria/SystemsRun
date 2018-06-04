@@ -1,7 +1,6 @@
 package menu;
 
 import control.App;
-import control.World;
 
 public class PlayMenu extends Menu{
 	public PlayMenu(App app) {
@@ -10,6 +9,6 @@ public class PlayMenu extends Menu{
     
     @Override
     public void display() {
-        // create buttons in right spots and add to elements array
+        System.out.println("Play menu unimplemented");
     }
 }

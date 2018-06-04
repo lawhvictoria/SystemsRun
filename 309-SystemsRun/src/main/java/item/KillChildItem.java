@@ -28,7 +28,7 @@ public class KillChildItem extends Item {
     public void itemEffect(Player player) {
     		Draw.subtractDimension();
         if (!Draw.subtractDimension()) {
-            // kill player
+            deltaSleep *= 1;
         }
     }
 }

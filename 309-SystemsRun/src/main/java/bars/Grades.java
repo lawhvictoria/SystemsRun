@@ -1,7 +1,5 @@
 package bars;
 
-import control.App;
-
 public class Grades extends BarMenu{
 	int maxHealth = 30;
 	int health = 30;
@@ -13,9 +11,7 @@ public class Grades extends BarMenu{
 
 	@Override
 	public void display() {
-		// TODO Auto-generated method stub
-		
-		
+	    System.out.println("Unsupported");
 	}
 	
 	void decreaseHealth(){

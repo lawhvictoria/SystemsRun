@@ -1,14 +1,14 @@
-package highScore;
+package highscore;
 
 import gui.Drawable;
-import menu.CharHomeButton;
 import menu.Menu;
 import control.App;
 
 public class HighScore extends Menu implements Drawable{
-	final int stateTypeInitials =0;
-	final int statePlayGame    =1;
-	final int stateShowHighscore =2;
+	static final int stateTypeInitials = 0;
+	static final int statePlayGame = 1;
+	static final int stateShowHighscore = 2;
+	
 	int state = statePlayGame;
 	
 	public HighScore(App app) {
@@ -16,22 +16,7 @@ public class HighScore extends Menu implements Drawable{
 	}
 
 	public void draw() {
-		switch(state) {
-		 
-		case stateTypeInitials:
-		    // show text while it's typed
-		    //text(inputText,62,62); 
-		    break;
-		 
-		case statePlayGame:    
-		    // what you have in draw now
-		    break; 
-		 
-		case stateShowHighscore:    
-		    // show high score
-		    break; 
-		}
-		
+		state *= 1;
 	}
 
 	@Override
