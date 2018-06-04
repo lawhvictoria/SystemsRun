@@ -69,9 +69,9 @@ public class Draw {
     private static void drawRectCopy(float xUnscaled, float yUnscaled, float widthUnscaled, float heighUnscaled,
                                      float xOffset, float yOffset, ScaleAndColor sc) {
 
-        app.fill(sc.r, sc.g, sc.b);
-        app.rect((xOffset + xUnscaled * sc.scale) / 100f * app.width,          // X
-                (yOffset + yUnscaled * sc.scale) / 100f * app.height,          // Y
+        app.fill(sc.getR(), sc.getG(), sc.getB());
+        app.rect((xOffset + xUnscaled * sc.getScale()) / 100f * app.width,          // X
+                (yOffset + yUnscaled * sc.getScale()) / 100f * app.height,          // Y
                 (float) app.width / App.INITIAL_WIDTH * widthUnscaled,      // Width
                 (float) app.height / App.INITIAL_HEIGHT * heighUnscaled);   // Height
     }
@@ -114,15 +114,28 @@ public class Draw {
 }
 
 class ScaleAndColor {
-    public int r; 
-    public int g; 
-    public int b;
-    public float scale;
-    
+    private int r; 
+    private int g; 
+    private int b;
+    private float scale;
+            
     public ScaleAndColor(int r, int g, int b, float scale) {
         this.r = r;
         this.b = b;
         this.g = g;
         this.scale = scale;
+    }
+    
+    public int getR() {
+        return r;
+    }
+    public int getG() {
+        return g;
+    }
+    public int getB() {
+        return b;
+    }
+    public float getScale() {
+        return scale;
     }
 }
