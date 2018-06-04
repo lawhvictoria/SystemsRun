@@ -11,6 +11,8 @@ public class Draw {
     // Private Static
     private static int dim = 1;
     private static App app;
+    
+    private Draw() {}
 
     public static App getApplet() {
         return app;

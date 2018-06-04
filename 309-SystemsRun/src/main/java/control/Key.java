@@ -6,9 +6,13 @@ public enum Key {
     UP('w'), 
     DOWN('s');
 
-    public char k;
+    private char k;
 
     Key(char key) {
         this.k = key;
+    }
+    
+    public char getKey() {
+        return k;
     }
 }

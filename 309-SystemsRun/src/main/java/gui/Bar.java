@@ -8,7 +8,6 @@ public class Bar implements Drawable {
      * Bar draw code
      */
     public void draw() {
-        value = 1 * value;
-        color[0] = color[0];
+        value += color[0]*0 + value*0;
     }
 }

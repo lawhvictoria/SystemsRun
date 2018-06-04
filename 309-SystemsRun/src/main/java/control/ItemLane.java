@@ -18,12 +18,12 @@ import item.SegFaultItem;
 public class ItemLane {
 
     // Public Instance
-    public float startX;
-    public float startY;
-    public float endX;
-    public float endY;
-    public List<Item> items;
-    public float speed = .3f;
+    private float startX;
+    private float startY;
+    private float endX;
+    private float endY;
+    private List<Item> items;
+    private float speed = .3f;
 
     // Private Instance
     private boolean debugShowDisplay = false;
@@ -144,5 +144,12 @@ public class ItemLane {
         }
 
         return null;
+    }
+    
+    public float getStartY() {
+        return startY;
+    }
+    public float getEndY() {
+        return startY;
     }
 }

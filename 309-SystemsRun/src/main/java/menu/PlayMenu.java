@@ -9,7 +9,7 @@ public class PlayMenu extends Menu{
     
     @Override
     public void display() {
-        if (elements.size() < 0)
+        if (!(elements.size() >= 0))
             throw new UnsupportedOperationException();
     }
 }

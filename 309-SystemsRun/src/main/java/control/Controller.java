@@ -6,13 +6,15 @@ public class Controller {
 
     private static ArrayList<Controllable> controllers = new ArrayList<Controllable>();
 
+    private Controller() {}
+    
     public static void addListener(Controllable listener) {
         controllers.add(listener);
     }
 
     public static void keyUpdate(char key, boolean down) {
         for (Key control : Key.values()) {
-            if (control.k == key) {
+            if (control.getKey() == key) {
                 notifyListeners(control, down);
             }
         }

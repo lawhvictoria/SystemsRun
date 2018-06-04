@@ -7,8 +7,8 @@ import item.Item;
 public class Player implements Drawable, Controllable {
 
     // Public Instance
-    public float speedX = 1;
-    public float speedY = 1;
+    private float speedX = 1;
+    private float speedY = 1;
 
     // Private Instance
     private float speedVelY = 0;
@@ -71,7 +71,7 @@ public class Player implements Drawable, Controllable {
             x -= speedX;
         }
 
-        if (y <= Math.min(targetLane.startY, targetLane.endY) || y >= Math.max(targetLane.startY, targetLane.endY)) {
+        if (y <= Math.min(targetLane.getStartY(), targetLane.getEndY()) || y >= Math.max(targetLane.getStartY(), targetLane.getEndY())) {
             y -= speedVelY;
             speedVelY = 0;
         }

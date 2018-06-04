@@ -14,11 +14,7 @@ public class World implements DrawGroup{
 	private ArrayList<Drawable> killed = new ArrayList<Drawable>();
 	private ArrayList<ItemLane> lanes = new ArrayList<ItemLane>();
 	private Random rand = new Random();
-	
-    public float redHealth=0;
-    public float blueHealth=0;
-    public float greenHealth =0;
-    public float totalHealth = 0;
+
 	
 	public World() {
 	    objects.add(new Background("src/images/playBackground00.png", 

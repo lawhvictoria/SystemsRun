@@ -14,10 +14,10 @@ public abstract class Item implements Drawable {
     public static final float Y_DESPAWN_RANGE = 100;
 
     // Public Instance
-    public float deltaSocial;
-    public float deltaGrade;
-    public float deltaSleep;
-    public PImage img;
+    protected float deltaSocial;
+    protected float deltaGrade;
+    protected float deltaSleep;
+    protected PImage img;
 
     // Private Instance
     private float x;

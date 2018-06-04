@@ -99,10 +99,10 @@ public abstract class Button implements Drawable, Controllable {
     
     private void checkHover() {
         
-        if( App.toWorldX(app.mouseX) > App.toWorldX(App.toRealX(x) - Draw.scaleX(imgCurrent.width/2)) &&  
-            App.toWorldX(app.mouseX) < App.toWorldX(App.toRealX(x) + Draw.scaleX(imgCurrent.width/2)) &&
-            App.toWorldY(app.mouseY) > App.toWorldY(App.toRealY(y) - Draw.scaleY(imgCurrent.height/2)) &&
-            App.toWorldY(app.mouseY) < App.toWorldY(App.toRealY(y) + Draw.scaleY(imgCurrent.height/2))) {
+        if( App.toWorldX(app.mouseX) > App.toWorldX(App.toRealX(x) - Draw.scaleX((float)imgCurrent.width/2)) &&  
+            App.toWorldX(app.mouseX) < App.toWorldX(App.toRealX(x) + Draw.scaleX((float)imgCurrent.width/2)) &&
+            App.toWorldY(app.mouseY) > App.toWorldY(App.toRealY(y) - Draw.scaleY((float)imgCurrent.height/2)) &&
+            App.toWorldY(app.mouseY) < App.toWorldY(App.toRealY(y) + Draw.scaleY((float)imgCurrent.height/2))) {
                 
             if(!hover) {
                 onHover();
@@ -114,10 +114,10 @@ public abstract class Button implements Drawable, Controllable {
     }
     
     public void clickUpdate(float xC, float yC) {                
-        if( xC > App.toWorldX(App.toRealX(x) - Draw.scaleX(imgCurrent.width/2)) && 
-            xC < App.toWorldX(App.toRealX(x) + Draw.scaleX(imgCurrent.width/2)) &&
-            yC > App.toWorldY(App.toRealY(y) - Draw.scaleY(imgCurrent.height/2)) && 
-            yC < App.toWorldY(App.toRealY(y) + Draw.scaleY(imgCurrent.height/2))) {
+        if( xC > App.toWorldX(App.toRealX(x) - Draw.scaleX((float)imgCurrent.width/2)) && 
+            xC < App.toWorldX(App.toRealX(x) + Draw.scaleX((float)imgCurrent.width/2)) &&
+            yC > App.toWorldY(App.toRealY(y) - Draw.scaleY((float)imgCurrent.height/2)) && 
+            yC < App.toWorldY(App.toRealY(y) + Draw.scaleY((float)imgCurrent.height/2))) {
                 
             onClick();
         }        

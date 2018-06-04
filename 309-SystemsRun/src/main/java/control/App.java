@@ -12,7 +12,6 @@ import menu.MainMenu;
 import menu.SettingsMenu;
 import processing.awt.PSurfaceAWT.SmoothCanvas;
 import processing.core.PApplet;
-import processing.core.PImage;
 
 public class App extends PApplet implements Drawable{
 
@@ -23,16 +22,14 @@ public class App extends PApplet implements Drawable{
     public static final int INITIAL_HEIGHT = 700;
     
     public static final int TARGET_FPS = 30;
-    
-    public PImage img;
 
     // Private Instance
     private DrawGroup[] menu = new DrawGroup[5];
-    public DrawGroup currentView;
+    private DrawGroup currentView;
     
     private int fCount = 0;
     private long lastTime;
-    public int fps = 0;
+    private int fps = 0;
     
 
     // Main
@@ -65,8 +62,6 @@ public class App extends PApplet implements Drawable{
                 jf.setSize(jf.getWidth(), jf.getWidth() * INITIAL_HEIGHT / INITIAL_WIDTH);
             }
         });
-
-        img = loadImage("src/images/PlayOverlay.png");
         
         menu[0] = new MainMenu(this);
         menu[1] = new World();
@@ -123,6 +118,10 @@ public class App extends PApplet implements Drawable{
     
     public void loadDrawGroup(int state) {
         currentView = menu[state];
+    }
+    
+    public int getFPS() {
+        return fps;
     }
     
     public void close() {
