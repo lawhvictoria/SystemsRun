@@ -126,7 +126,7 @@ public abstract class Button implements Drawable, Controllable {
     @Override
     public void keyUpdate(Key key, boolean down) {
         x *= 1;
-    };
+    }
     
     
 }

@@ -30,9 +30,9 @@ public class App extends PApplet implements Drawable{
     private DrawGroup[] menu = new DrawGroup[5];
     public DrawGroup currentView;
     
-    private int frameCount = 0;
+    private int fCount = 0;
     private long lastTime;
-    public static int fps = 0;
+    public int fps = 0;
     
 
     // Main
@@ -96,12 +96,12 @@ public class App extends PApplet implements Drawable{
     public void draw() {
         background(200, 200, 200);
         currentView.update();
-        frameCount++;
+        fCount++;
         if(System.currentTimeMillis() - lastTime >= 1000) {
-            surface.setTitle("Systems Run [FPS: " + frameCount + "]");
+            surface.setTitle("Systems Run [FPS: " + fCount + "]");
             lastTime = System.currentTimeMillis();
-            fps = frameCount;
-            frameCount = 0;            
+            fps = fCount;
+            fCount = 0;            
         }
     }
     

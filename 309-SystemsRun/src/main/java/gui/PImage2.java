@@ -23,7 +23,7 @@ public class PImage2{
             current = 0;
         }
         
-        if(curSkip++ >= (float) frameSkip / (float)App.fps) {
+        if(curSkip++ >= (float) frameSkip / (float)Draw.getApplet().fps) {
             curSkip = 0;
             return imgs[current++];
         }

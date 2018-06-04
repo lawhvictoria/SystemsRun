@@ -10,10 +10,13 @@ public class Draw {
 
     // Private Static
     private static int dim = 1;
-    private static PApplet app;
+    private static App app;
 
+    public static App getApplet() {
+        return app;
+    }
     
-    public static void setApplet(PApplet applet) {
+    public static void setApplet(App applet) {
         app = applet;
     }
 

@@ -12,7 +12,8 @@ public class AppendixButton extends Button {
 
     @Override
     public void onClickAction(boolean clicked) {
-        
+        if (clicked)
+            delayFrameCount *= 1;
         
     }
 }

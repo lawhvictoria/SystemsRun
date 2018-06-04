@@ -5,11 +5,11 @@ import menu.Menu;
 import control.App;
 
 public class HighScore extends Menu implements Drawable{
-	static final int stateTypeInitials = 0;
-	static final int statePlayGame = 1;
-	static final int stateShowHighscore = 2;
+	static final int STATE_TYPE_INITIALS = 0;
+	static final int STATE_PLAY_GAME = 1;
+	static final int STATE_SHOW_HIGH_SCORE = 2;
 	
-	int state = statePlayGame;
+	int state = STATE_PLAY_GAME;
 	
 	public HighScore(App app) {
 		super(app, "src/images/highScoreBackground.png");

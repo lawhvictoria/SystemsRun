@@ -9,6 +9,7 @@ public class PlayMenu extends Menu{
     
     @Override
     public void display() {
-        System.out.println("Play menu unimplemented");
+        if (elements.size() < 0)
+            throw new UnsupportedOperationException();
     }
 }

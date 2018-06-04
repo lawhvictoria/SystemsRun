@@ -27,15 +27,15 @@ public class World implements DrawGroup{
 	    objects.add(new Background("src/images/PlayOverlay.png"));
 	    
 		ItemLane lane1 = new ItemLane(this, 47, 10.5f, 15, 100);
-		lane1.debugtoggleDisplay();
+		
 		lanes.add(lane1);
 		
 		ItemLane lane2 = new ItemLane(this, 50, 10.5f, 50, 100);
-		lane2.debugtoggleDisplay();
+		
 		lanes.add(lane2);
 		
 		ItemLane lane3 = new ItemLane(this, 53, 10.5f, 85, 100);
-		lane3.debugtoggleDisplay();
+		
 		lanes.add(lane3);
 		
 		Player player = new Player(this, 50, 50);
