@@ -9,7 +9,6 @@ public class PlayMenu extends Menu{
     
     @Override
     public void display() {
-        if (!(elements.size() >= 0))
-            throw new UnsupportedOperationException();
+        elements.add(new PlayButton(50, 70, app));
     }
 }

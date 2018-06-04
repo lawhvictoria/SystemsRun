@@ -150,6 +150,6 @@ public class ItemLane {
         return startY;
     }
     public float getEndY() {
-        return startY;
+        return endY;
     }
 }
