@@ -61,17 +61,17 @@ public class Draw {
             for (int j = 0; j < dim; j++) {
                 drawRectCopy(xUnscaled, yUnscaled, 
                              widthUnscaled, heighUnscaled, i * 100f / dim, j * 100f / dim,
-                             (float) 1 / dim, r, g, b);
+                             new ScaleAndColor(r, g, b, (float) 1 / dim));
             }
         }
     }
 
     private static void drawRectCopy(float xUnscaled, float yUnscaled, float widthUnscaled, float heighUnscaled,
-                                     float xOffset, float yOffset, float scale, int r, int g, int b) {
+                                     float xOffset, float yOffset, ScaleAndColor sc) {
 
-        app.fill(r, g, b);
-        app.rect((xOffset + xUnscaled * scale) / 100f * app.width,          // X
-                (yOffset + yUnscaled * scale) / 100f * app.height,          // Y
+        app.fill(sc.r, sc.g, sc.b);
+        app.rect((xOffset + xUnscaled * sc.scale) / 100f * app.width,          // X
+                (yOffset + yUnscaled * sc.scale) / 100f * app.height,          // Y
                 (float) app.width / App.INITIAL_WIDTH * widthUnscaled,      // Width
                 (float) app.height / App.INITIAL_HEIGHT * heighUnscaled);   // Height
     }
@@ -108,5 +108,19 @@ public class Draw {
     
     public static float scaleY(float y) {
         return (float) app.height / App.INITIAL_HEIGHT * y;
+    }
+    
+    
+}
+
+class ScaleAndColor {
+    public int r, g, b;
+    public float scale;
+    
+    public ScaleAndColor(int r, int g, int b, float scale) {
+        this.r = r;
+        this.b = b;
+        this.g = g;
+        this.scale = scale;
     }
 }
