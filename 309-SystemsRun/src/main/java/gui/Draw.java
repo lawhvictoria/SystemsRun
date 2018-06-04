@@ -114,7 +114,9 @@ public class Draw {
 }
 
 class ScaleAndColor {
-    public int r, g, b;
+    public int r; 
+    public int g; 
+    public int b;
     public float scale;
     
     public ScaleAndColor(int r, int g, int b, float scale) {
