@@ -71,6 +71,10 @@ public class App extends PApplet implements Drawable{
         
         currentView = menu[0];        
     }
+    
+    public World getWorld() {
+        return (World) menu[1];
+    }
 
     @Override
     public void keyPressed() {

@@ -32,6 +32,14 @@ public class Player implements Drawable, Controllable {
         world.addObject(this);
         Controller.addListener(this);
     }
+    
+    public float getX() {
+        return x;
+    }
+    
+    public float getY() {
+        return y;
+    }
 
     public void draw() {
 
