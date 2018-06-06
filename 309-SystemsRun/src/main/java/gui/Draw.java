@@ -14,6 +14,8 @@ public class Draw {
     
     private Draw() {}
 
+    private int davide;
+    
     public static App getApplet() {
         return app;
     }
